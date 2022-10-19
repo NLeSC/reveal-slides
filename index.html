@@ -33,6 +33,27 @@
           \end{aligned} \]
         </section>
 
+        <section>
+          <h3>Compatible with Reveal.js's lazy loading</h3>
+          <style>
+            .twocolumn {
+              display: grid;
+              grid-template-columns: 1fr 1fr;
+              grid-gap: 10px;
+              text-align: left;
+            }
+          </style>
+          <div class="twocolumn">
+            <div>
+              <p>Not preloaded</p>
+              <div class="fig-container" data-file="gooey.html"></div>
+            </div>
+            <div>
+              <p>Preloaded</p>
+              <div class="fig-container" data-file="gooey.html" data-preload></div>
+            </div>
+      </section>
+
       </div>
     </div>
     <script type="module" src="/main.js"></script>

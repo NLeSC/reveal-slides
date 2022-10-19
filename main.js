@@ -7,6 +7,7 @@ import Math from 'reveal.js/plugin/math/math.esm.js';
 import Notes from 'reveal.js/plugin/notes/notes.esm.js';
 import Search from 'reveal.js/plugin/search/search.esm.js';
 import Zoom from 'reveal.js/plugin/zoom/zoom.esm.js';
+import { Reveald3 } from './plugin/reveald3.js';
 
 const deck = new Reveal()
 deck.initialize({
@@ -22,8 +23,5 @@ deck.initialize({
   //   markers: true,
   //   hideMissingTitles: true,
   // },
-  // dependencies: [
-  //   {src: 'reveal.js/4.3.1/reveal.js-plugins/reveal.js-d3/reveald3.js'}
-  // ],
-  plugins: [ Highlight, Markdown, Math.KaTeX, Notes, Search, Zoom ],  // Menu from separate reveal.js plugins
+  plugins: [ Highlight, Markdown, Math.KaTeX, Notes, Search, Zoom, Reveald3 ],  // Menu from separate reveal.js plugins
 })
