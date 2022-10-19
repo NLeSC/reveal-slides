@@ -7,11 +7,18 @@ their recommended installation, but not my preferred one).
 
 Inspired by https://glebbahmutov.com/blog/reveal-vite/
 
-## To use
+## To use as template
+Click the button "Use this template". This will create a copy of this repository
+in your own github account. Give your new repo a suitable name. Subsequently,
+to edit and preview:
+
 ```
-git clone ...
+git clone <your new repo>
 cd reveal-vite
 yarn
+
+# Modify package.json:
+# change the name field to the name you chose for your repo
 
 # To start a development server
 yarn dev
