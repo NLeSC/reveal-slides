@@ -65,10 +65,10 @@ function updateDecorations( deck ) {
     'purple-half-circle-bottom',
   ];
 
-  // Process compound states
+  // First process compound states
   const compoundStates = {
     'standard': ' logo yellow-flag white-overlay',
-    "two-pane": ' logo yellow-flag white-overlay blue-pane-right',
+    'two-pane': ' logo yellow-flag white-overlay blue-pane-right',
     'about': ' logo white-overlay blue-pane-left purple-half-circle-top purple-strip-bottom yellow-half-strip',
     'touch': ' logo blue-overlay touch-pane purple-blob right-e-bottom',
   }
@@ -76,6 +76,23 @@ function updateDecorations( deck ) {
   for (var key in compoundStates) {
     if (dataState.includes(key)){
       dataState += compoundStates[key]
+    }
+  }
+
+  // Decide on the logo
+  if (dataState.includes("logo")) {
+    if (dataState.includes("purple-overlay")) {
+      dataState += " logo-part-white";
+    } else if (dataState.includes("white-overlay")) {
+      dataState += " logo-color";
+    } else if (dataState.includes("black-overlay")) {
+      dataState += " logo-part-white";
+    } else if (dataState.includes("blue-overlay")) {
+      if (dataState.includes("touch-pane")) {
+        dataState += " logo-color";
+      } else {
+        dataState += " logo-white";
+      }
     }
   }
 

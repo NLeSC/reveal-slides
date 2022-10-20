@@ -79,7 +79,7 @@ $heading4Size: 1.0em;
 }
 
 // Logo stuff
-#logo-color {
+#logo-color, #logo-part-white, #logo-white {
   transition: opacity 1s, left 1s;
   opacity: 0;
   position: absolute;
@@ -89,29 +89,9 @@ $heading4Size: 1.0em;
   img {
     width: 12vw;
   }
-}
-
-#logo-part-white {
-  transition: opacity 1s, left 1s;
-  opacity: 0;
-  position: absolute;
-  left: -12vw;
-  top: 1.5vh;
-  z-index: 2;
-  img {
-    width: 12vw;
-  }
-}
-
-#logo-white {
-  transition: opacity 1s, left 1s;
-  opacity: 0;
-  position: absolute;
-  left: -12vw;
-  top: 1.5vh;
-  z-index: 2;
-  img{
-    width: 12vw;
+  &.visible {
+    left: 3vw;
+    opacity: 1;
   }
 }
 
