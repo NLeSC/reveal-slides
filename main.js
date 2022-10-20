@@ -25,3 +25,32 @@ deck.initialize({
   // },
   plugins: [ Highlight, Markdown, Math.KaTeX, Notes, Search, Zoom, Reveald3 ],  // Menu from separate reveal.js plugins
 })
+
+function addDecorations() {
+  var currentSlide = deck.getCurrentSlide();
+  if ( currentSlide.getAttribute('data-state') )
+  {
+    var data_state = currentSlide.getAttribute('data-state')
+
+    // yellow strip
+    if ( data_state.includes("yellow_strip"))
+    {
+      document.getElementById("yellow_strip").style.left = 0;
+    } else {
+      document.getElementById("yellow_strip").style.left = -10 + "vw";
+    };
+
+    // yellow flag
+    if ( data_state.includes("yellow_flag"))
+    {
+      document.getElementById("yellow_flag").style.left = 0;
+    } else {
+      document.getElementById("yellow_flag").style.left = -10 + "vh";
+    };
+  };
+};
+
+// Update decorations on slide change event
+deck.on( 'slidechanged', event => {
+    addDecorations();
+});

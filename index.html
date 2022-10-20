@@ -7,21 +7,49 @@
     <title>Vite App</title>
   </head>
   <body>
+    <div class="decorations">
+      <div id="yellow_strip" style="background-color: #FFB213; transition: left 1s; width: 10vw; height: 70vh; border-radius: 10vw 10vw 0 0; z-index: 2; position: absolute; left: -10vw; bottom: 0;">
+      </div>
+      <div id="yellow_flag" style="background-color: #FFB213; transition: left 1s, bottom 1s; width: 10vh; height: 12vh; border-radius: 0 6vh 6vh 0; z-index: 3; position: absolute; left: -10vh; bottom: 5vh; margin: 0; padding: 0;">
+        <img id="left_e" src="./files/e-logo.svg" style="position: absolute; height: 10vh; margin: 1vh 0; padding: 0;"></img>
+      </div>
+    </div>
     <div class="reveal">
       <div class="slides">
         <section>
           <h1>eScience Center</h1>
           <h2>Presentation template</h2>
           Using reveal.js and vite
+          <p class="fragment fade-in-then-out">Fading fragment!</p>
         </section>
 
-        <section>
+        <section data-background-color="aquamarine">
           <h2>Highlights</h2>
           <ul>
             <li>Easy to use</li>
             <li>Use all the power of reveal.js</li>
             <li>On top of that, use custom eScience branding</li>
           </ul>
+        </section>
+
+        <section data-markdown data-separator-vertical="^\r?\n===\r?\n$">
+          <script type="text/template">
+            ## Inline markdown slide 1
+            A paragraph with some text and a [link](https://www.esciencecenter.nl/).
+
+            ---
+
+            ## Inline markdown slide 2.1
+            Fading markdown paragraph <!-- .element: class="fragment fade-in-then-out" -->
+
+            ===
+
+            ## Inline markdown slide 2.2
+            <p class="fragment fade-in-then-out">Fading html paragraph</p>
+
+            Notes:
+            Here we can edit speaker notes
+          </script>
         </section>
 
         <section>
@@ -34,13 +62,13 @@
         </section>
 
         <section>
-          <h3>Compatible with Reveal.js's lazy loading</h3>
+          <h3>Using external plugin reveald3.js</h3>
           <style>
             .twocolumn {
               display: grid;
               grid-template-columns: 1fr 1fr;
               grid-gap: 10px;
-              text-align: left;
+              text-align: center;
             }
           </style>
           <div class="twocolumn">
@@ -52,7 +80,15 @@
               <p>Preloaded</p>
               <div class="fig-container" data-file="gooey.html" data-preload></div>
             </div>
-      </section>
+          </div>
+        </section>
+
+        <section data-state="yellow_strip">
+          Adding the data-state attribute to the section allows you to apply
+          custom css to the viewport, controlled by the active slide.
+        </section>
+
+
 
       </div>
     </div>
