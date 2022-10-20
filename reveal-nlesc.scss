@@ -43,3 +43,17 @@ $heading4Size: 1.0em;
 // Theme template ------------------------------
 @import "reveal.js/css/theme/template/theme";
 // ---------------------------------------------
+
+// Styling for decorations
+#yellow-strip {
+  background-color: $eScienceYellow;
+  width: 10vw;
+  height: 70vh;
+  border-radius: 10vw 10vw 0 0;
+  z-index: 2;
+  position: absolute;
+  left: -10vw;
+  bottom: 0;
+  transition: left 1s;
+}
+#yellow-strip.visible { left: 0; }
