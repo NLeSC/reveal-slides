@@ -41,7 +41,7 @@ export default {
 
 function updateDecorations( deck ) {
   const currentSlide = deck.getCurrentSlide();
-  const dataState = currentSlide.getAttribute('data-state') || [];
+  var dataState = currentSlide.getAttribute('data-state') || [];
   const decorations = [
     'purple-overlay',
     'blue-overlay',
@@ -65,13 +65,21 @@ function updateDecorations( deck ) {
     'purple-half-circle-bottom',
   ];
 
+  // Process compound states
   const compoundStates = {
-    standard: ['logo', 'yellow-flag', 'white-overlay'],
-    "two-pane": ['logo', 'yellow-flag', 'white-overlay', 'blue-pane-right'],
-    about: ['logo', 'white-overlay', 'blue-pane-left', 'purple-half-circle-top', 'purple-strip-bottom', 'yellow-half-strip'],
-    touch: ['logo','blue-overlay' ,'touch-pane' ,'purple-blob' ,'right-e-bottom'],
+    'standard': ' logo yellow-flag white-overlay',
+    "two-pane": ' logo yellow-flag white-overlay blue-pane-right',
+    'about': ' logo white-overlay blue-pane-left purple-half-circle-top purple-strip-bottom yellow-half-strip',
+    'touch': ' logo blue-overlay touch-pane purple-blob right-e-bottom',
   }
 
+  for (var key in compoundStates) {
+    if (dataState.includes(key)){
+      dataState += compoundStates[key]
+    }
+  }
+
+  // Toggle visibility of set decorations
   decorations.forEach((decoration) => {
     var el = document.getElementById(decoration);
     if (dataState.includes(decoration)) {
