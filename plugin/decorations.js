@@ -16,7 +16,7 @@ export default {
   }
 
 function initDecorations( deck) {
-  const viewport = deck.getViewportElement();
+  const reveal = deck.getRevealElement();
   const decorations = document.createElement('div');
   decorations.setAttribute("id", "decorations");
   decorations.innerHTML = `
@@ -40,5 +40,5 @@ function initDecorations( deck) {
     <div class="box"></div>
   </div>
   `;
-  viewport.appendChild(decorations);
+  reveal.prepend(decorations)
 }
