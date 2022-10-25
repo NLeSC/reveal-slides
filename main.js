@@ -8,7 +8,7 @@ import Notes from 'reveal.js/plugin/notes/notes.esm.js';
 import Search from 'reveal.js/plugin/search/search.esm.js';
 import Zoom from 'reveal.js/plugin/zoom/zoom.esm.js';
 import { Reveald3 } from './plugin/reveald3.js';
-import Decorations from './plugin/decorations.js';
+import Decorations from './plugin/escience/decorations.js';
 
 const deck = new Reveal()
 deck.initialize({
