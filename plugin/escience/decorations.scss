@@ -269,19 +269,16 @@
   // Classes for toggling multiple elements at once; default styles
   &.standard {
     @include logo-color;
-    @include white-overlay;
     @include yellow-flag;
   }
   &.two-pane {
     // why not just use "standard blue-pane-right" directly?
     @include logo-color;
     @include yellow-flag;
-    @include white-overlay;
     @include blue-pane-right;
   }
   &.about {
     @include logo-white;
-    @include white-overlay;
     @include blue-pane-left;
     @include purple-half-circle-top;
     @include purple-strip-bottom;
@@ -294,4 +291,9 @@
     @include purple-blob;
     @include right-e-bottom;
   }
+
+  section.has-dark-background { h1, h2, h3 {
+    color: white;
+  }
+}
 }

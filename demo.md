@@ -1,13 +1,10 @@
-<!-- .slide: data-state="blue-overlay yellow-flag yellow-strip purple-half-circle-bottom purple-blob right-e-top" data-background-video="./files/Mood video Homepage 2.mp4" data-background-video-loop data-background-video-muted="true" -->
+<!-- .slide: data-state="yellow-flag yellow-strip purple-half-circle-bottom purple-blob right-e-top" data-background-color="#009DDD" -->
 
 # My Title
-## Header 2
-### Header 3
-#### Subheader
 
 <br>
 
-**[Author Name](mailto:a.name@esciencecenter.nl)** | **eScience Center**
+Subtitle
 
 
 
