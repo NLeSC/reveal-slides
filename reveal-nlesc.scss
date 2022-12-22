@@ -1,0 +1,53 @@
+/**
+ * Black theme for reveal.js. This is the opposite of the 'white' theme.
+ *
+ * By Hakim El Hattab, http://hakim.se
+ */
+
+
+// Default mixins and settings -----------------
+@import "reveal.js/css/theme/template/mixins";
+@import "reveal.js/css/theme/template/settings";
+// ---------------------------------------------
+
+
+// Include theme-specific fonts
+@import url("https://fonts.googleapis.com/css?family=Nunito:bold");
+@import url("https://fonts.googleapis.com/css?family=Assistant");
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons");
+
+// Override theme settings (see ../template/settings.scss)
+
+$eScienceBlue: #009DDD;
+$eSciencePurple: #380339;
+$eScienceYellow: #FFB213;
+
+$backgroundColor: #D8D8D8;  // primary in Ole's template
+
+$mainColor: black;
+$headingColor: black;
+
+$mainFont: 'Assistant', Helvetica, sans-serif;
+$headingFont: 'Nunito', Helvetica, sans-serif;
+$headingTextTransform: none;
+$headingFontWeight: bold;
+$linkColor: $eScienceYellow;
+$linkColorHover: lighten( $linkColor, 15% );
+$selectionBackgroundColor: lighten( $linkColor, 25% );
+
+$heading1Size: 2.5em;
+$heading2Size: 1.6em;
+$heading3Size: 1.3em;
+$heading4Size: 1.0em;
+
+// Theme template ------------------------------
+@import "reveal.js/css/theme/template/theme";
+// ---------------------------------------------
+
+@import "plugin/escience/decorations";
+
+
+.slides {
+	/* puts the slide content above overlays and decorations*/
+	z-index: 10;
+}
