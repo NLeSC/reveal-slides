@@ -162,18 +162,18 @@
 #purple-half-circle-bottom {
   transition: bottom 1s;
   background-color: $eSciencePurple;
-  width: 20vw;
-  height: 10vw;
+  width: 30vw;
+  height: 15vw;
   border-radius: 20vw 20vw 0 0;
   z-index: 2;
   position: absolute;
   left: 0;
   bottom: -10vw;
   img {
-    position: absolute;
-    bottom: 2vw;
-    left: 6vw;
-    width: 8vw;
+    position: relative;
+    bottom: -24%;
+    left: 22%;
+    width: 55%;
   }
 }
 
