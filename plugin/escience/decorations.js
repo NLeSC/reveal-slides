@@ -31,9 +31,10 @@ function initDecorations( deck) {
   <div id="logo-part-white"><img src="./files/logo-fc-part-white.svg"></div>
   <div id="logo-white"><img src="./files/logo-fc-white.svg"></div>
   <div id="yellow-flag"><img class="left-e" src="./files/e-logo.svg"></img></div>
-  <div id="purple-half-circle-bottom"><img class="left-e" src="./files/logo-fc-part-white.svg"></img></div>
+  <div id="purple-half-circle-bottom"><img class="logo" src="./files/logo-fc-part-white.svg"></img></div>
   <div id="blue-strip"><div id="footer"></div></div>
   <img id="right-e" src="./files/letter-e.svg"></img>
+  <img id="left-e" src="./files/e-logo.svg"></img>
   <div id="purple-blob">
     <div class="blob1"></div>
     <div class="blob2"></div>

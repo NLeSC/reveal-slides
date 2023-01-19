@@ -34,8 +34,16 @@
 #right-e {
   transition: right 1s, top 1s;
   position: absolute;
-  right: -4vw;
-  width: 4vw;
+  right: -6vw;
+  width: 6vw;
+  z-index: 3;
+}
+
+#left-e {
+  transition: left 1s, bottom 1s;
+  position: absolute;
+  width: 6vw;
+  left: -6vw;
   z-index: 3;
 }
 
@@ -90,12 +98,12 @@
 
 #yellow-strip {
   background-color: $eScienceYellow;
-  width: 10vw;
-  height: 70vh;
+  width: 18vw;
+  height: 75vh;
   border-radius: 10vw 10vw 0 0;
   z-index: 2;
   position: absolute;
-  left: -10vw;
+  left: -18vw;
   bottom: 0;
   transition: left 1s;
 }
@@ -118,17 +126,17 @@
   transition: left 1s, bottom 1s;
   width: 10vh;
   height: 12vh;
-  border-radius: 0 6vh 6vh 0;
-  z-index: 3;
+  border-radius: 0 7vh 7vh 0;
+  z-index: 1;
   position: absolute;
   left: -10vh;
   bottom: 5vh;
   margin: 0;
-  padding: 0;
+  padding: 1vh 0 0 0;
   img {
-    position: absolute;
-    height: 10vh;
-    margin: 1vh 0;
+    position: relative;
+    height: 90%;
+    margin: 0;
     padding: 0;
   }
 }
@@ -162,16 +170,16 @@
 #purple-half-circle-bottom {
   transition: bottom 1s;
   background-color: $eSciencePurple;
-  width: 30vw;
-  height: 15vw;
+  width: 36vw;
+  height: 22vw;
   border-radius: 20vw 20vw 0 0;
   z-index: 2;
   position: absolute;
   left: 0;
-  bottom: -10vw;
+  bottom: -22vw;
   img {
     position: relative;
-    bottom: -24%;
+    bottom: -34%;
     left: 22%;
     width: 55%;
   }
@@ -234,6 +242,8 @@
 @mixin right-e-top { #right-e { top: 10vh; right: 0; }}
 @mixin right-e-bottom { #right-e { top: 80vh; right: 0; }}
 
+@mixin left-e { #left-e { bottom: 30vh; left: 0} }
+
 
 // data-state changes set classes on the reveal-viewport element
 // so this is where we can build up our custom classes
@@ -264,12 +274,29 @@
   &.right-e-bottom { @include right-e-bottom; }
 
   // Adjust position of yellow flag when combined with purple half circle
-  &.purple-half-circle-bottom.yellow-flag { #yellow-flag { bottom: 20vh; } }
+ // &.purple-half-circle-bottom.yellow-flag { #yellow-flag { }}// bottom: 50%;  } }
 
+
+//data-state="yellow-flag yellow-strip purple-half-circle-bottom purple-blob right-e-top" data-background-color="#009DDD"
+  &.title {
+    @include purple-half-circle-bottom;
+    @include purple-blob;
+    @include right-e-top;
+    @include yellow-strip;
+    @include blue-overlay;
+    @include left-e;
+    h1 {
+      color: white;
+    }
+  }
   // Classes for toggling multiple elements at once; default styles
   &.standard {
     @include logo-color;
     @include yellow-flag;
+    h1, h2, h3 {
+      text-align: left;
+      padding-left: 10%;
+    }
   }
   &.two-pane {
     // why not just use "standard blue-pane-right" directly?
@@ -284,7 +311,7 @@
     @include purple-strip-bottom;
     @include yellow-half-strip;
   }
-  &.touch {
+  &.keepintouch {
     @include logo-color;
     @include blue-overlay;
     @include touch-pane;

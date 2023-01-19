@@ -1,4 +1,4 @@
-<!-- .slide: data-state="yellow-flag yellow-strip purple-half-circle-bottom purple-blob right-e-top" data-background-color="#009DDD" -->
+<!-- .slide: data-state="title" -->
 
 # My Title
 
@@ -13,6 +13,11 @@ Subtitle
 <!-- .slide: data-state="standard" -->
 
 # File Structure
+
+## Here is some text. navigate down for more info.
+- And bullet points
+  - with two different
+  - levels
 
 ---
 
@@ -33,6 +38,11 @@ Subtitle
 
 - Three dashes `---` surrounded by newlines separate one slide from the next.
 - Three equal signs `===` surrounded by newlines create a new column within one file.
+
+===
+<!-- .slide: data-state="standard" -->
+
+
 
 ===
 
