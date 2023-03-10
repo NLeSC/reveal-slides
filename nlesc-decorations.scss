@@ -28,6 +28,7 @@ $mainColor: black;
 $headingColor: black;
 
 $mainFont: 'Assistant', Helvetica, sans-serif;
+$mainFontSize: 28px;
 $headingFont: 'Nunito', Helvetica, sans-serif;
 $headingTextTransform: none;
 $headingFontWeight: bold;
@@ -35,16 +36,22 @@ $linkColor: $eScienceYellow;
 $linkColorHover: lighten( $linkColor, 15% );
 $selectionBackgroundColor: lighten( $linkColor, 25% );
 
-$heading1Size: 2.0em;
-$heading2Size: 1.4em;
-$heading3Size: 1.2em;
-$heading4Size: 1.0em;
+// Vertical spacing between blocks of text
+$blockMargin: 20px;
+
+// Headings
+$headingMargin: 0 0 $blockMargin 0;
+$heading1Size: 3.0em;
+$heading2Size: 2.5em;
+$heading3Size: 2.0em;
+$heading4Size: 1.5em;
+
 
 // Theme template ------------------------------
 @import "reveal.js/css/theme/template/theme";
 // ---------------------------------------------
 
-// Styling for decorations, see decorations.js for corresponding elements.
+// Styling for decorations, see nlesc-decorations.js for corresponding elements.
 
 // By default, all decorations are out of view/hidden
 #overlay {
@@ -100,7 +107,7 @@ $heading4Size: 1.0em;
 	position: absolute;
 	bottom: 0;
 	top: 0;
-	z-index: 2;
+	z-index: 1;
   }
 
   #touch-pane {
@@ -342,7 +349,7 @@ $heading4Size: 1.0em;
 	&.standard {
 	  @include logo-color;
 	  @include yellow-flag;
-	  h1, h2, h3 {
+	  h1, h2, h3, p, ul{
 		text-align: left;
 		padding-left: 10%;
 	  }
@@ -352,6 +359,10 @@ $heading4Size: 1.0em;
 	  @include logo-color;
 	  @include yellow-flag;
 	  @include blue-pane-right;
+	  h1, h2, h3, p, ul {
+		text-align: left;
+		padding-right: 50%;
+	  }
 	}
 	&.about {
 	  @include logo-white;

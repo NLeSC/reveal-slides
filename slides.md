@@ -37,6 +37,8 @@ Subtitle | A Person's Name | 20 February 2023
 - This should maybe contain an image
 - To the right
 
+And some text that is not in bullets.
+
 ===
 
 <!-- .slide: data-state="keepintouch" -->
