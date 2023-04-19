@@ -340,9 +340,9 @@ $heading4Size: 1.5em;
 	  @include yellow-strip;
 	  @include blue-overlay;
 	  @include left-e;
-	  h1 {
+	  h1, h2 {
 		color: white;
-		margin: 0 13vw -10vh 23vw;
+		//margin: 0 13vw -10vh 23vw;
 	  }
 	}
 	// Classes for toggling multiple elements at once; default styles
