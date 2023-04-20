@@ -342,7 +342,7 @@ $heading4Size: 1.5em;
 	  @include left-e;
 	  h1, h2 {
 		color: white;
-		//margin: 0 13vw -10vh 23vw;
+		margin: 6vh 6vw 6vh 15vw;
 	  }
 	}
 	// Classes for toggling multiple elements at once; default styles
@@ -390,9 +390,10 @@ $heading4Size: 1.5em;
 	  color: white;
 	}
   }
+  .slides {
+	/* puts the slide content above overlays and decorations*/
+	//position: relative;
+	z-index: 10;
+	}
   }
 
-.slides {
-	/* puts the slide content above overlays and decorations*/
-	z-index: 10;
-}
