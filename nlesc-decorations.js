@@ -23,15 +23,17 @@ function initDecorations( deck) {
   <div id="overlay"></div>
   <div id="blue-pane"></div>
   <div id="purple-half-circle-top"></div>
-  <div id="purple-strip-bottom"></div>
+  <div id="purple-half-circle-bottomleft"></div>
+  <div id="purple-half-circle-bottommiddle"></div>
   <div id="yellow-strip"></div>
-  <div id="yellow-half-strip"></div>
+  <div id="yellow-half-strip-left"></div>
+  <div id="yellow-half-strip-right"></div>
   <div id="touch-pane"><h1>Let's stay<br>in touch</h1></div>
   <div id="logo-color"><img src="./files/logo-fc.svg"></div>
   <div id="logo-part-white"><img src="./files/logo-fc-part-white.svg"></div>
   <div id="logo-white"><img src="./files/logo-fc-white.svg"></div>
   <div id="yellow-flag"><img class="left-e" src="./files/e-logo.svg"></img></div>
-  <div id="purple-half-circle-bottom"><img class="logo" src="./files/logo-fc-part-white.svg"></img></div>
+  <div id="purple-half-circle-logo"><img class="logo" src="./files/logo-fc-part-white.svg"></img></div>
   <div id="blue-strip"><div id="footer"></div></div>
   <img id="right-e" src="./files/letter-e.svg"></img>
   <img id="left-e" src="./files/e-logo.svg"></img>

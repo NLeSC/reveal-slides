@@ -163,7 +163,7 @@ $heading4Size: 1.5em;
 
   #yellow-strip.visible { left: 0; }
 
-  #yellow-half-strip {
+  #yellow-half-strip-left {
 	opacity: 1;
 	transition: bottom 1s;
 	position: absolute;
@@ -173,6 +173,19 @@ $heading4Size: 1.5em;
 	width: 17vw;
 	height: 25vh;
 	border-radius: 20vw 0 0 0;
+	z-index: 2;
+  }
+
+  #yellow-half-strip-right {
+	opacity: 1;
+	transition: bottom 1s;
+	position: absolute;
+	background-color: $eScienceYellow;
+	right: 50vw;
+	bottom: -25vh;
+	width: 17vw;
+	height: 25vh;
+	border-radius: 0 20vw 0 0;
 	z-index: 2;
   }
 
@@ -196,7 +209,7 @@ $heading4Size: 1.5em;
 	}
   }
 
-  #purple-strip-bottom {
+  #purple-half-circle-bottomleft {
 	opacity: 1;
 	transition: bottom 1s;
 	position: absolute;
@@ -222,7 +235,7 @@ $heading4Size: 1.5em;
 	z-index: 2;
   }
 
-  #purple-half-circle-bottom {
+  #purple-half-circle-logo {
 	transition: bottom 1s;
 	background-color: $eSciencePurple;
 	width: 36vw;
@@ -238,6 +251,19 @@ $heading4Size: 1.5em;
 	  left: 22%;
 	  width: 55%;
 	}
+  }
+
+  #purple-half-circle-bottommiddle {
+	opacity: 1;
+	transition: bottom 1s;
+	position: absolute;
+	background-color: $eSciencePurple;
+	right: calc(50% - 16vw);
+	bottom: -10vh;
+	width: 16vw;
+	height: 10vh;
+	border-radius: 20vw 20vw 0 0;
+	z-index: 99;
   }
 
   #purple-blob {
@@ -283,12 +309,14 @@ $heading4Size: 1.5em;
 
   @mixin yellow-flag { #yellow-flag { left: 0; } }
   @mixin yellow-strip { #yellow-strip { left: 0; } }
-  @mixin yellow-half-strip { #yellow-half-strip { bottom: 0; } }
+  @mixin yellow-half-strip-right { #yellow-half-strip-right { bottom: 0; } }
+  @mixin yellow-half-strip-left { #yellow-half-strip-left { bottom: 0; } }
 
   @mixin purple-blob { #purple-blob { top: 0; }}
   @mixin purple-half-circle-top { #purple-half-circle-top { top: 0; } }
-  @mixin purple-half-circle-bottom { #purple-half-circle-bottom { bottom: 0; } }
-  @mixin purple-strip-bottom { #purple-strip-bottom { bottom: 0; } }
+  @mixin purple-half-circle-bottommiddle { #purple-half-circle-bottommiddle { bottom: 0; } }
+  @mixin purple-half-circle-bottomleft { #purple-half-circle-bottomleft { bottom: 0; } }
+  @mixin purple-half-circle-logo { #purple-half-circle-logo { bottom: 0; } }
 
   @mixin touch-pane { #touch-pane { opacity: 1; } }
   @mixin blue-pane-left { #blue-pane { opacity: 1; left: 0; right: 50%;} }
@@ -308,25 +336,25 @@ $heading4Size: 1.5em;
 
 	// e.g. "for any element with the .reveal-viewport class that also has the
 	// .white-overlay class, apply the 'white-overlay' styling rule", etc.
-	&.white-overlay { @include white-overlay; }
-	&.black-overlay { @include black-overlay; }
-	&.blue-overlay { @include blue-overlay; }
-	&.purple-overlay { @include purple-overlay; }
-	&.logo-color { @include logo-color; }
-	&.logo-white { @include logo-white; }
-	&.logo-part-white { @include logo-part-white; }
-	&.yellow-flag { @include yellow-flag }
-	&.yellow-strip { @include yellow-strip; }
-	&.yellow-half-strip { @include yellow-half-strip; }
-	&.purple-blob { @include purple-blob; }
-	&.purple-half-circle-top { @include purple-half-circle-top; }
-	&.purple-half-circle-bottom { @include purple-half-circle-bottom; }
-	&.purple-strip-bottom { @include purple-strip-bottom; }
-	&.touch-pane { @include touch-pane; }
-	&.blue-pane-left { @include blue-pane-left; }
-	&.blue-pane-right { @include blue-pane-right; }
-	&.right-e-top { @include right-e-top; }
-	&.right-e-bottom { @include right-e-bottom; }
+	// &.white-overlay { @include white-overlay; }
+	// &.black-overlay { @include black-overlay; }
+	// &.blue-overlay { @include blue-overlay; }
+	// &.purple-overlay { @include purple-overlay; }
+	// &.logo-color { @include logo-color; }
+	// &.logo-white { @include logo-white; }
+	// &.logo-part-white { @include logo-part-white; }
+	// &.yellow-flag { @include yellow-flag }
+	// &.yellow-strip { @include yellow-strip; }
+	// &.yellow-half-strip { @include yellow-half-strip; }
+	// &.purple-blob { @include purple-blob; }
+	// &.purple-half-circle-top { @include purple-half-circle-top; }
+	// &.purple-half-circle-bottom { @include purple-half-circle-bottom; }
+	// &.purple-strip-bottom { @include purple-strip-bottom; }
+	// &.touch-pane { @include touch-pane; }
+	// &.blue-pane-left { @include blue-pane-left; }
+	// &.blue-pane-right { @include blue-pane-right; }
+	// &.right-e-top { @include right-e-top; }
+	// &.right-e-bottom { @include right-e-bottom; }
 
 	// Adjust position of yellow flag when combined with purple half circle
    // &.purple-half-circle-bottom.yellow-flag { #yellow-flag { }}// bottom: 50%;  } }
@@ -334,7 +362,7 @@ $heading4Size: 1.5em;
 
   //data-state="yellow-flag yellow-strip purple-half-circle-bottom purple-blob right-e-top" data-background-color="#009DDD"
 	&.title {
-	  @include purple-half-circle-bottom;
+	  @include purple-half-circle-logo;
 	  @include purple-blob;
 	  @include right-e-top;
 	  @include yellow-strip;
@@ -365,11 +393,11 @@ $heading4Size: 1.5em;
 	  }
 	}
 	&.about {
-	  @include logo-white;
+	  @include logo-part-white;
 	  @include blue-pane-left;
 	  @include purple-half-circle-top;
-	  @include purple-strip-bottom;
-	  @include yellow-half-strip;
+	  @include purple-half-circle-bottomleft;
+	  @include yellow-half-strip-left;
 	}
 	&.keepintouch {
 	  @include logo-color;
@@ -377,6 +405,8 @@ $heading4Size: 1.5em;
 	  @include touch-pane;
 	  @include purple-blob;
 	  @include right-e-bottom;
+	  @include yellow-half-strip-right;
+	  @include purple-half-circle-bottommiddle;
 	}
 	&.code {
 	  @include logo-color;
