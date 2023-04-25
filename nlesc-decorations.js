@@ -23,12 +23,11 @@ function initDecorations( deck) {
   <div id="overlay"></div>
   <div id="blue-pane"></div>
   <div id="purple-half-circle-top"></div>
-  <div id="purple-half-circle-bottomleft"></div>
-  <div id="purple-half-circle-bottommiddle"></div>
+  <div id="purple-half-circle-bottom"></div>
   <div id="yellow-strip"></div>
   <div id="yellow-half-strip-left"></div>
   <div id="yellow-half-strip-right"></div>
-  <div id="touch-pane"><h1>Let's stay<br>in touch</h1></div>
+  <div id="touch-pane"><h3>Let's stay<br>in touch</h3></div>
   <div id="logo-color"><img src="./files/logo-fc.svg"></div>
   <div id="logo-part-white"><img src="./files/logo-fc-part-white.svg"></div>
   <div id="logo-white"><img src="./files/logo-fc-white.svg"></div>
@@ -42,6 +41,9 @@ function initDecorations( deck) {
     <div class="blob2"></div>
     <div class="box"></div>
   </div>
+  <div id="globe"><img src="./files/globe.png"></img></div>
+  <div id="mail"><img src="./files/mail.png"></img></div>
+  <div id="phone"><img src="./files/phone.png"></img></div>
   `;
   reveal.prepend(decorations)
 }

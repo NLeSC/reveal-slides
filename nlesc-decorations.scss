@@ -209,12 +209,12 @@ $heading4Size: 1.5em;
 	}
   }
 
-  #purple-half-circle-bottomleft {
+  #purple-half-circle-bottom {
 	opacity: 1;
 	transition: bottom 1s;
 	position: absolute;
 	background-color: $eSciencePurple;
-	right: calc(50% + 17vw);
+	right: -10vw;
 	bottom: -10vh;
 	width: 16vw;
 	height: 10vh;
@@ -253,18 +253,7 @@ $heading4Size: 1.5em;
 	}
   }
 
-  #purple-half-circle-bottommiddle {
-	opacity: 1;
-	transition: bottom 1s;
-	position: absolute;
-	background-color: $eSciencePurple;
-	right: calc(50% - 16vw);
-	bottom: -10vh;
-	width: 16vw;
-	height: 10vh;
-	border-radius: 20vw 20vw 0 0;
-	z-index: 99;
-  }
+
 
   #purple-blob {
 	transition: top 1s;
@@ -296,6 +285,14 @@ $heading4Size: 1.5em;
 	  background-image: radial-gradient(circle at 0 100%, rgba(204,0,0,0) 5vw, $eSciencePurple 15px)
 	}
   }
+  #globe, #phone, #mail {
+	transition: left 1s;
+	position: absolute;
+	width: 2.2vw;
+	z-index: 3;
+	top: 0vh;
+	left: 0vw;
+  }
 
   // Define how decorations look when 'activated', using mixins to avoid repetition
   @mixin white-overlay { #overlay { background-color: white; opacity: .8; } }
@@ -314,8 +311,8 @@ $heading4Size: 1.5em;
 
   @mixin purple-blob { #purple-blob { top: 0; }}
   @mixin purple-half-circle-top { #purple-half-circle-top { top: 0; } }
-  @mixin purple-half-circle-bottommiddle { #purple-half-circle-bottommiddle { bottom: 0; } }
-  @mixin purple-half-circle-bottomleft { #purple-half-circle-bottomleft { bottom: 0; } }
+  @mixin purple-half-circle-bottommiddle { #purple-half-circle-bottom { bottom: 0; right: calc(50% - 17vw); } }
+  @mixin purple-half-circle-bottomleft { #purple-half-circle-bottom { bottom: 0; right: calc(50% + 17vw); } }
   @mixin purple-half-circle-logo { #purple-half-circle-logo { bottom: 0; } }
 
   @mixin touch-pane { #touch-pane { opacity: 1; } }
@@ -326,6 +323,10 @@ $heading4Size: 1.5em;
   @mixin right-e-bottom { #right-e { top: 80vh; right: 0; }}
 
   @mixin left-e { #left-e { bottom: 30vh; left: 0} }
+
+  @mixin globe { #globe { top: 38.6vh; left: 46vw; } }
+  @mixin mail { #mail {	top: 46.6vh; left: 46vw; } }
+  @mixin phone { #phone { top: 53.5vh; left: 46vw; } }
 
 
   // data-state changes set classes on the reveal-viewport element
@@ -407,6 +408,16 @@ $heading4Size: 1.5em;
 	  @include right-e-bottom;
 	  @include yellow-half-strip-right;
 	  @include purple-half-circle-bottommiddle;
+	  @include globe;
+	  @include mail;
+	  @include phone;
+	  h1, h2, p, ul {
+		text-align: left;
+		padding-left: 50%;
+	  };
+	  a, p {
+		color: white;
+	  }
 	}
 	&.code {
 	  @include logo-color;

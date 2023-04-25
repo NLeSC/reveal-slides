@@ -43,10 +43,11 @@ And some text that is not in bullets.
 
 <!-- .slide: data-state="keepintouch" -->
 
-## Keep in touch
+www.eScienceCenter.nl
 
-Stay in touch with us!
+info@esciencecenter.nl
 
++31 (0)20 460 4770
 
 ===
 
