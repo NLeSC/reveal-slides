@@ -152,7 +152,7 @@ $heading4Size: 1.5em;
   #yellow-strip {
 	background-color: $eScienceYellow;
 	width: 18vw;
-	height: 75vh;
+	height: 85vh;
 	border-radius: 10vw 10vw 0 0;
 	z-index: 2;
 	position: absolute;
@@ -214,10 +214,10 @@ $heading4Size: 1.5em;
 	transition: bottom 1s;
 	position: absolute;
 	background-color: $eSciencePurple;
-	right: -10vw;
-	bottom: -10vh;
-	width: 16vw;
-	height: 10vh;
+	right: -15vw;
+	bottom: -15vh;
+	width: 15vw;
+	height: 15vh;
 	border-radius: 20vw 20vw 0 0;
 	z-index: 2;
   }
@@ -239,12 +239,12 @@ $heading4Size: 1.5em;
 	transition: bottom 1s;
 	background-color: $eSciencePurple;
 	width: 36vw;
-	height: 22vh;
-	border-radius: 20vw 20vw 0 0;
+	height: 30vh;
+	border-radius: 28vw 28vw 0 0;
 	z-index: 2;
 	position: absolute;
 	left: 0;
-	bottom: -22vh;
+	bottom: -30vh;
 	img {
 	  position: relative;
 	  bottom: -34%;
@@ -252,8 +252,6 @@ $heading4Size: 1.5em;
 	  width: 55%;
 	}
   }
-
-
 
   #purple-blob {
 	transition: top 1s;
@@ -285,13 +283,14 @@ $heading4Size: 1.5em;
 	  background-image: radial-gradient(circle at 0 100%, rgba(204,0,0,0) 5vw, $eSciencePurple 15px)
 	}
   }
+
   #globe, #phone, #mail {
 	transition: left 1s;
 	position: absolute;
 	width: 2.2vw;
 	z-index: 3;
-	top: 0vh;
-	left: 0vw;
+	top: -20vh;
+	left: -20vw;
   }
 
   // Define how decorations look when 'activated', using mixins to avoid repetition
@@ -311,7 +310,7 @@ $heading4Size: 1.5em;
 
   @mixin purple-blob { #purple-blob { top: 0; }}
   @mixin purple-half-circle-top { #purple-half-circle-top { top: 0; } }
-  @mixin purple-half-circle-bottommiddle { #purple-half-circle-bottom { bottom: 0; right: calc(50% - 17vw); } }
+  @mixin purple-half-circle-bottommiddle { #purple-half-circle-bottom { bottom: 0; right: calc(50% - 15vw); } }
   @mixin purple-half-circle-bottomleft { #purple-half-circle-bottom { bottom: 0; right: calc(50% + 17vw); } }
   @mixin purple-half-circle-logo { #purple-half-circle-logo { bottom: 0; } }
 
@@ -320,7 +319,7 @@ $heading4Size: 1.5em;
   @mixin blue-pane-right { #blue-pane { opacity: 1; left: 50%; right: 0;} }
 
   @mixin right-e-top { #right-e { top: 10vh; right: 0; }}
-  @mixin right-e-bottom { #right-e { top: 80vh; right: 0; }}
+  @mixin right-e-bottom { #right-e { top: 67vh; right: 0; }}
 
   @mixin left-e { #left-e { bottom: 30vh; left: 0} }
 
