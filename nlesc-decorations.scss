@@ -134,14 +134,14 @@ $heading4Size: 1.5em;
 	opacity: 0;
 	position: absolute;
 	left: 6vw;
-	right: 50%;
+	right: 52%;
 	bottom: 0;
 	top: 0;
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	z-index: 2;
-	h4 {
+	h3 {
 	  color: white;
 	  text-align: left;
 	}
@@ -420,6 +420,10 @@ $heading4Size: 1.5em;
 	  @include purple-half-circle-bottomleft;
 	  @include yellow-half-strip-left;
 	  @include empowering;
+	  h1, h2, p, ul {
+		text-align: left;
+		padding-left: 55%;
+	  };
 	}
 	&.keepintouch {
 	  @include logo-color;
