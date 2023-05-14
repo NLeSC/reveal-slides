@@ -64,13 +64,5 @@ def thisisafunction:
 
 <!-- .slide: data-state="about" -->
 
-## About the eScience center
-
-“Empowering
-researchers across
-all disciplines
-through innovative
-research software”
-
 Contact person:
 [my.email@esciencecenter.nl](my.email@esciencecenter.nl)

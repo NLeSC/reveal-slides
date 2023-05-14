@@ -17,12 +17,6 @@ deck.initialize({
   progress: true,
   center: true,
   hash: true,
-  transition: 'slide', // none/fade/slide/convex/concave/zoom
-  // menu: { // Menu works best with font-awesome installed: sudo apt-get install fonts-font-awesome
-  //   themes: false,
-  //   transitions: false,
-  //   markers: true,
-  //   hideMissingTitles: true,
-  // },
+  transition: 'slide',
   plugins: [ Highlight, Markdown, Math.KaTeX, Notes, Search, Zoom, Reveald3, Decorations ],  // Menu from separate reveal.js plugins
 })

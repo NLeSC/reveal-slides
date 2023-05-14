@@ -123,11 +123,30 @@ $heading4Size: 1.5em;
 	align-items: center;
 	justify-content: center;
 	z-index: 2;
-	h1 {
+	h3 {
 	  color: black;
 	  text-align: left;
 	}
   }
+
+  #empowering {
+	transition: opacity 1s;
+	opacity: 0;
+	position: absolute;
+	left: 6vw;
+	right: 50%;
+	bottom: 0;
+	top: 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	z-index: 2;
+	h4 {
+	  color: white;
+	  text-align: left;
+	}
+  }
+
 
   #blue-strip {
 	background-color: $eScienceBlue;
@@ -197,7 +216,7 @@ $heading4Size: 1.5em;
 	border-radius: 0 7vh 7vh 0;
 	z-index: 1;
 	position: absolute;
-	left: -10vh;
+	left: -20vh;
 	bottom: 5vh;
 	margin: 0;
 	padding: 1vw 0 0 0;
@@ -228,9 +247,9 @@ $heading4Size: 1.5em;
 	position: absolute;
 	background-color: $eSciencePurple;
 	left: 0;
-	top: -17vh;
-	width: 34vw;
-	height: 17vh;
+	top: -30vh;
+	width: 30vw;
+	height: 30vh;
 	border-radius: 0 0 20vw 20vw;
 	z-index: 2;
   }
@@ -315,6 +334,8 @@ $heading4Size: 1.5em;
   @mixin purple-half-circle-logo { #purple-half-circle-logo { bottom: 0; } }
 
   @mixin touch-pane { #touch-pane { opacity: 1; } }
+  @mixin empowering { #empowering { opacity: 1} }
+
   @mixin blue-pane-left { #blue-pane { opacity: 1; left: 0; right: 50%;} }
   @mixin blue-pane-right { #blue-pane { opacity: 1; left: 50%; right: 0;} }
 
@@ -398,6 +419,7 @@ $heading4Size: 1.5em;
 	  @include purple-half-circle-top;
 	  @include purple-half-circle-bottomleft;
 	  @include yellow-half-strip-left;
+	  @include empowering;
 	}
 	&.keepintouch {
 	  @include logo-color;
@@ -419,11 +441,8 @@ $heading4Size: 1.5em;
 	  }
 	}
 	&.code {
-	  @include logo-color;
-	  @include blue-overlay;
-	  @include touch-pane;
-	  @include purple-blob;
-	  @include right-e-bottom;
+		@include logo-color;
+		@include yellow-flag;
 	}
 
 	section.has-dark-background { h1, h2, h3 {
