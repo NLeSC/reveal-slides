@@ -1,11 +1,10 @@
 <!-- .slide: data-state="title" -->
 
-# TITLE SLIDE
+# My eScience Presentation
 
 <br>
 
-Subtitle | A Person's Name | 20 February 2023
-
+Author Name | 20 October 2043
 
 
 ===
@@ -51,18 +50,7 @@ info@esciencecenter.nl
 
 ===
 
-<!-- .slide: data-state="code" -->
-
-## Slide with code example
-
-```
-def thisisafunction:
-  print("function")
-```
-
-===
-
 <!-- .slide: data-state="about" -->
 
-Contact person:
+**Contact person:**
 [my.email@esciencecenter.nl](my.email@esciencecenter.nl)

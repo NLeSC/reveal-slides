@@ -444,10 +444,6 @@ $heading4Size: 1.5em;
 		color: white;
 	  }
 	}
-	&.code {
-		@include logo-color;
-		@include yellow-flag;
-	}
 
 	section.has-dark-background { h1, h2, h3 {
 	  color: white;
