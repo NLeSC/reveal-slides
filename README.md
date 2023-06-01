@@ -8,7 +8,7 @@ their recommended installation, but not preferred by the creators of this repo).
 ## eScience Center styling
 
 This template includes default styling with Netherlands
-eScience Center branding. This consists of three main components:
+eScience Center branding. This consists of two main components:
 
 - `nlesc-decorations.js`: a [reveal.js
   plugin](https://revealjs.com/creating-plugins/) that inserts some elements
